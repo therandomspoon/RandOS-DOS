@@ -8,6 +8,19 @@ import os
 import itertools
 import threading
 
+
+def change_color(color):
+    colors = {
+        "red": "\033[91m",
+        "green": "\033[92m",
+        "yellow": "\033[93m",
+        "blue": "\033[94m",
+        "purple": "\033[95m",
+        "cyan": "\033[96m",
+    }
+    return colors.get(color, "")
+    print(change_color("white") + "Hackermode engaged")
+
 print("welcome to RandOS")                                                            
 print('  DDDDDDDDDDDDD             OOOOOOOOO        SSSSSSSSSSSSSSS')
 print('  D::::::::::::DDD        OO:::::::::OO    SS:::::::::::::::S')
@@ -36,7 +49,7 @@ def ping(host):
         return False
     else:
         return True
-
+aaaaaaaaaaaaaa = True
 print('What would you like to do?')
 comind = input()
 if comind == 'ping':
@@ -86,12 +99,36 @@ elif comind == 'echo':
         else:
             return
     ecio()
+elif comind == 'hackermode':
+    sys.set_int_max_str_digits(10000000)
+    def change_color(color):
+     colors = {
+           "red": "\033[91m",
+            "green": "\033[92m",
+           "yellow": "\033[93m",
+           "blue": "\033[94m",
+           "purple": "\033[95m",
+          "cyan": "\033[96m",
+       }
+     return colors.get(color, "")
+    print(change_color("green") + "Hackermode engaged")
+    time.sleep(2.5)
+    numing = 0
+    while aaaaaaaaaaaaaa != False:
+        numing = numing + 1
+        print(numing)
+        numing = numing * numing
+        print(numing)
+        time.sleep(0.5)
+
 
 elif comind == 'help':
     print('RandOS - DOS v1.02 Alpha-release Early access')
     print('command list:')
     print('ping - pings a hostname or ip address')
     print('dir - lists all directories on you device (may only work if file is running locally)')
+    print('echo - prints text to the screen')
+    print('hackermode - hollywood')
     print('Important links')
     print('github - https://github.com/therandomspoon/RandOS-DOS/tree/main')
     print('Documentation - https://randdosdocumentation.randspoon.co.uk/')
